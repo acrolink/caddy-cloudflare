@@ -11,3 +11,7 @@ FROM caddy:${CADDY_VERSION}
 
 # Copy the custom-built Caddy binary
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
+
+# acrolink
+RUN adduser -D user
+RUN mkdir /data && chown user:user /data
