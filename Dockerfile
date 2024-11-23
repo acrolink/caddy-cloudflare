@@ -14,4 +14,4 @@ COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
 # acrolink
 RUN adduser -D user
-RUN mkdir /data && chown user:user /data
+RUN chown user:user /data
